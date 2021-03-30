@@ -1,0 +1,24 @@
+No React tudo é um componente e todo componente é uma função.
+  Estrutura básica de todo componente a partir da versão 16 do React:
+    import React from 'react';
+
+    function primeiroapp() {
+      return <div />;
+    }
+
+    export default primeiroapp;
+
+
+Um atributo é uma propriedade na função e um componente é uma função.
+Atributo: ex - <Button nameButton={'Clique aqui'} />
+
+componente Button, o componente está recebendo o atributo (nameButton) na variavel props que está dentro da função Button
+  function Button(props) {
+    return (
+      <button> // aqui é uma tag button
+        {props.nameButton} // aqui é a propriedade que veio por atributo da onde o componente enviou a prop
+      </button>
+    );
+  };
+
+o resultado será renderizar um botao com um texto dentro dele 'Clique aqui'
